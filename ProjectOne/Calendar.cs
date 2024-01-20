@@ -17,8 +17,11 @@ namespace ProjectOne
             DateTime now = GetCurrentDate();
             Console.WriteLine($"Today's date is {now.ToShortDateString()}");
             if(args.Length!=0)
-            args[0]= $"Today's date is {now.ToShortDateString()}";
-            Console.ReadLine();
+            {
+                args[0]= $"Today's date is {now.ToShortDateString()}";
+                return;
+            }
+            Console.ReadKey();
         }
     }
 }
